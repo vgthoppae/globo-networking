@@ -1,0 +1,45 @@
+import {
+  id = "rtb-0dd80374177213aea"
+  to = "aws_route_table.public_rt"
+}
+
+import {
+  id = "igw-036341925c702082b"
+  to = "aws_internet_gateway.gw"
+}
+
+import {
+  id = "rtb-0dd80374177213aea_0.0.0.0/0"
+  to = "aws_route.default_route"
+}
+
+import {
+  id = "vpc-030bd408206efa1ea"
+  to = "aws_vpc.vpc"
+}
+
+import {
+  id = "subnet-09c0626c529332f69"
+  to = "aws_subnet.public_subnet1"
+}
+
+import {
+  id = "subnet-009c7bc961d8191b0"
+  to = "aws_subnet.public_subnet2"
+}
+
+import {
+  id = "sg-005199d1ef94c20af"
+  to = "aws_security_group.no_ingress_sg"
+}
+
+import {
+  id = "rtbassoc-05da2c9172aeee1e1"
+  to = "aws_route_table_association.public_subnet1_rtb_association"
+}
+
+import {
+  id = "rtbassoc-0dd80374177213aea"
+  to = "aws_route_table_association.public_subnet2_rtb_association"
+}
+
