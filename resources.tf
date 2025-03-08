@@ -15,7 +15,7 @@ module "cf_vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
   name = var.prefix
-  cidr = "10.42.0.0/16"
+  cidr = var.cidr_block
 
   azs                     = slice(data.aws_availability_zones.available.names, 0, length(var.public_subnets))
   public_subnets          = [for k, v in var.public_subnets : v]
