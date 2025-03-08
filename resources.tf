@@ -17,8 +17,8 @@ module "cf_vpc" {
   cidr = "10.42.0.0/16"
 
   azs                     = slice(data.aws_availability_zones.available.names, 0, length(var.public_subnets))
-  public_subnets          = [for k,v in var.public_subnets : v]
-  public_subnet_names     = [for k,v in var.public_subnets : "${var.prefix}-${k}"]
+  public_subnets          = [for k, v in var.public_subnets : v]
+  public_subnet_names     = [for k, v in var.public_subnets : "${var.prefix}-${k}"]
   enable_dns_hostnames    = true
   public_subnet_suffix    = ""
   public_route_table_tags = { Name = "${var.prefix}-public" }
